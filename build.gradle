@@ -1,0 +1,23 @@
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp'      
+
+compileJava {
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    
+    providedCompile 'org.apache.tomcat:tomcat-catalina:8.5.16'
+    compile 'mysql:mysql-connector-java:8.0.9-rc'
+    compile 'org.apache.commons:commons-math3:3.6.1'
+    
+    implementation 'com.google.guava:guava:21.0'
+
+    testImplementation 'junit:junit:4.12'
+}
+
